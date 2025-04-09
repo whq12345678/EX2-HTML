@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinchan - Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin-right: 10px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 1.5em;
+        }
+
+        p {
+            color: #666;
+        }
+
+       .character-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+       .character {
+            text-align: center;
+            width: 30%;
+            margin-bottom: 30px;
+        }
+
+       .character img {
+            width: 100%;
+            height: auto;
+            max-width: 150px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto;
+            display: block;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        a {
+            color: #333;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="assets/shin-chan-banner.jpg" alt="Shinchan Banner">
+        <nav>
+            <a href="#">Shinchan: Shiro and the Coal Town Game</a>
+            <a href="#">Characters</a>
+            <a href="#">Who's your favorite?</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Shinchan: Shiro and the Coal Town</h1>
+        <p>(Available on: Nintendo Switch and Windows PC)</p>
+        <video src="assets/shinchan-and-the-coal-town.mp4" controls poster="assets/shinchan-coal-town-poster.jpg">
+        </video>
+        <h2>The Characters</h2>
+        <div class="character-container">
+            <div class="character">
+                <img src="assets/character-shinchan.png" alt="Shinnosuke Nohara (Shinchan)">
+                <h3>Shinnosuke Nohara (Shinchan)</h3>
+                <p>The mischievous 5-year-old protagonist known for his hilarious antics and love of choco chips.</p>
+            </div>
+            <div class="character">
+                <img src="assets/character-misae.webp" alt="Misae Nohara (Mom)">
+                <h3>Misae Nohara (Mom)</h3>
+                <p>Shinchan’s short-tempered but loving mother, always trying to keep him in line.</p>
+            </div>
+            <div class="character">
+                <img src="assets/character-hiroshi.webp" alt="Hiroshi Nohara (Dad)">
+                <h3>Hiroshi Nohara (Dad)</h3>
+                <p>The laid-back father who works at a company and enjoys his evening beer.</p>
+            </div>
+            <div class="character">
+                <img src="assets/character-himawari.png" alt="Himawari (Sister)">
+                <h3>Himawari (Sister)</h3>
+                <p>The youngest of the Noharas. Loves shiny objects and brandname goods. Smiles sideways, like Shinchan</p>
+            </div>
+            <div class="character">
+                <img src="assets/character-shiro.png" alt="Yukino Nohara (Shiro)">
+                <h3>Yukino Nohara (Shiro)</h3>
+                <p>The family dog - small, fluffy, and sometimes the most sensible member of the household.</p>
+            </div>
+            <div class="character">
+                <img src="assets/character-toru-kazama.webp" alt="Toru Kazama">
+                <h3>Toru Kazama</h3>
+                <p>The smart and responsible friend of Shinchan, often the voice of reason in the group.</p>
+            </div>
+        </div>
+        <form>
+            <h2>Who's your favorite?</h2>
+            <label for="favoriteCharacter">Who's your favorite character?</label>
+            <select id="favoriteCharacter" name="favoriteCharacter">
+                <option value="Shinchan">Shinchan</option>
+                <option value="Misae Nohara (Mom)">Misae Nohara (Mom)</option>
+                <option value="Hiroshi Nohara (Dad)">Hiroshi Nohara (Dad)</option>
+                <option value="Himawari (Sister)">Himawari (Sister)</option>
+                <option value="Yukino Nohara (Shiro)">Yukino Nohara (Shiro)</option>
+                <option value="Toru Kazama">Toru Kazama</option>
+            </select>
+            <label for="otherCharacter">Character not in the list? Write their name below:</label>
+            <input type="text" id="otherCharacter" name="otherCharacter" placeholder="Enter character name">
+            <label for="reason">Why do you like this character?</label>
+            <textarea id="reason" name="reason" rows="4" cols="50" placeholder="State your reasons in a couple of lines..."></textarea>
+            <h2>Tell us a bit more about yourself</h2>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <label for="gender">Your Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <label for="birthDate">Your Date of Birth:</label>
+            <input type="date" id="birthDate" name="birthDate">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+        <p>© 2025 Programming4</p>
+        <p>Get in touch with us: <a href="mailto:shinchan-lovers@justlearninghtml.com">shinchan-lovers@justlearninghtml.com</a></p>
+    </footer>
+</body>
+
+</html>
